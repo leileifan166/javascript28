@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myjs.js"></script>
+</head>
+<body>
+    <script>
+        var a = "这是全局变量";
+        function send(){
+            var b = "这是局部变量";
+            document.write(a + "<br>");
+        }
+        send();
+        //document.write(b); 错误代码，局部变量b只作用于函数体内，不允许在函数外输出局部变量
+
+        var c = "这是全局变量";
+        function send1(){
+            var c = "这是局部变量";
+            document.write(c);
+        }
+        send1();
+
+        var str1 = "123abc";
+        var str2 = "abc123";
+        document.write(parseInt(str1) + "<br>");
+        document.write(parseInt(str1,8) + "<br>");
+        document.write(parseInt(str2));
+    </script>
+
+    
+
+    
+</body>
+</html>
